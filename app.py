@@ -16,7 +16,7 @@ access_key_secret = "k077vmUmpPzYHeNOBUsY47tZiARH6kj4w7RpoxzEbBUqM"
 client = tweepy.Client(bearer_token=bearer_token)
 
 # Function to preprocess text
-def preprocess_text(text):
+def preprocess_text(text): 
     # Convert to lower case
     text = text.lower()
     # Remove user handles
@@ -48,7 +48,7 @@ def main():
     # Get tweets
     query = st.text_input('Enter Twitter query (e.g., #iphone16)')
     if st.button('Get Tweets'):
-        response = client.search_recent_tweets(query=query, max_results=100)
+        response = client.search_recent_tweets(query=query, max_results=25)
         tweets = response.data
 
         # Process tweets
