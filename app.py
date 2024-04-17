@@ -6,11 +6,11 @@ from textblob import TextBlob
 import time
 
 
-consumer_key = "kprGTrSpOWVoATFDN8d8C5PA3"
-consumer_key_secret = "aNtMpCQVsTAa8fJa0JrA5Ivitl7aCkY92Bkj43k6szEZUK7khf"
-bearer_token = "AAAAAAAAAAAAAAAAAAAAADq4tAEAAAAA3c%2Fh1SWI%2FgI5Ccd%2F04J8Er5VT3w%3D5M7hx2hCSFl0L46CiBu7ZiGTKpwrQvW8rCNZZN4hCnZ9Flylpa"
-access_key = "1775947963476402176-rL4zT6QEBxgoeAQPwwZ2YX2bk200Rh"
-access_key_secret = "4wmFlJEOx0dUnSkGnUYVo7WcWR2bKltwpEIKiOLK33Kkx"
+consumer_key = "lF0O2phF3sW7u145zVRu0ngFN"
+consumer_key_secret = "1w9yrHjKRGtDm9F3RUE0ptKw3mDmmJyhFGs9ej4uLNRzq9ilCE"
+bearer_token = "AAAAAAAAAAAAAAAAAAAAADq4tAEAAAAAw2LzGDUMwJHTaUvXvNoeyg4lYyg%3DVupztXPXxl3oRsmD33ZPiJfqE7obwa2L5q3JAmnrPJPqU56GYb"
+access_key = "1775947963476402176-kcpLKYpQddR0gc9N7DKWtEnFkDS018"
+access_key_secret = "k077vmUmpPzYHeNOBUsY47tZiARH6kj4w7RpoxzEbBUqM"
 
 # Initialize Tweepy client
 client = tweepy.Client(bearer_token=bearer_token)
@@ -48,7 +48,7 @@ def main():
     # Get tweets
     query = st.text_input('Enter Twitter query (e.g., #iphone16)')
     if st.button('Get Tweets'):
-        response = client.search_recent_tweets(query=query, max_results=10)
+        response = client.search_recent_tweets(query=query, max_results=100)
         tweets = response.data
 
         # Process tweets
